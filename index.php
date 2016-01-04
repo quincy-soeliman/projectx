@@ -1,5 +1,5 @@
 <?php
-// Require init.php
+require_once 'app/init.php';
 include_once 'templates/header.php';
 ?>
 
