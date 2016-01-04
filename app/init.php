@@ -1,10 +1,10 @@
 <?php
 
 // Config
-require_once 'config.php';
+require_once 'app/config.php';
 
 // Database
-require_once 'database/Database.php';
+require_once 'app/database/Database.php';
 
 // Classes
-require_once 'core/Summoner.php';
+require_once 'app/core/Summoner.php';
