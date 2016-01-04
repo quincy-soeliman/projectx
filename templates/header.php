@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 </head>
 <body>
+
 <div class="header">
   <div class="container">
     <!-- Header -->
