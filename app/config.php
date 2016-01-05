@@ -3,13 +3,11 @@
 /**
  * Database configuration
  */
-$db = [
-  'db_type' => '',
-  'db_host' => '',
-  'db_name' => '',
-  'db_user' => '',
-  'db_pass' => '',
-];
+define('DB_TYPE', 'mysql');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'projectx');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 /**
  * API configuration

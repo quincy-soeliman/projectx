@@ -3,23 +3,11 @@
 class Database {
 
   private $db;
-  private $db_settings = [
-    'db_type' => 'mysql',
-    'db_host' => 'localhost',
-    'db_name' => 'projectx',
-    'db_user' => 'root',
-    'db_pass' => '',
-  ];
 
   public function connect() {
     try {
-      // Creates new PDO object
-      $this->db = new PDO(
-        $this->db_settings['db_type'] .
-        ':host=' . $this->db_settings['db_host'] .
-        ';dbname=' . $this->db_settings['db_name'],
-        $this->db_settings['db_user'],
-        $this->db_settings['db_pass']);
+      $this->db = new PDO(DB_TYPE . ':host=' . DB_HOST . ';dbname=' .
+        DB_NAME, DB_USER, DB_PASS);
 
       return $this->db;
     } catch (PDOException $e) {
