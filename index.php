@@ -5,8 +5,7 @@ include_once 'templates/header.php';
 if (isset($_POST['summoner-name'])) {
   $summoner_name = $_POST['summoner-name'];
 
-  $summoner = new Summoner();
-  $summoner->get_info($summoner_name);
+  $summoner = new Summoner($summoner_name);
   $summoner_name = $summoner->get_name();
   $summoner_id = $summoner->get_id();
 

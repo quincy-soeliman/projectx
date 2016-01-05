@@ -3,16 +3,19 @@
 class Summoner {
 
   private $db;
-
+  private $summoner;
   private $id;
   private $name;
   private $profile_icon_id;
   private $revision_date;
   private $summoner_level;
 
-  public function __construct() {
+  public function __construct($summoner) {
     $this->db = new Database();
     $this->db->connect();
+
+    $this->summoner = $summoner;
+    $this->get_info($this->summoner);
   }
 
   public function get_info($summoner) {
