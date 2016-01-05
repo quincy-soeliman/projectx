@@ -16,6 +16,19 @@ class Profile extends Summoner {
     return $profile_icon;
   }
 
+  public function get_ranked_info() {
+    $summoner_id = $this->get_summoner_id();
+    $url = BASE_URL . '/api/lol/euw/v2.5/league/by-summoner/' . $summoner_id . '/entry' . API_KEY;
+    $request = file_get_contents($url);
+    $data = json_decode($request, true);
+
+    foreach ($data[$summoner_id] as $key => $value) {
+      //
+    }
+
+    return $data;
+  }
+
   public function render_form() {
     $form = '<div class="profile-form">';
 

@@ -25,7 +25,7 @@ class Summoner {
     $data = json_decode($request, true);
 
     foreach ($data as $value) {
-      $this->id = $value['id'];
+      $this->id = intval($value['id']);
       $this->name = $value['name'];
       $this->profile_icon_id = $value['profileIconId'];
       $this->revision_date = $value['revisionDate'];
@@ -37,7 +37,7 @@ class Summoner {
     return $this->id;
   }
 
-  public function get_name() {
+  public function get_summoner_name() {
     return $this->name;
   }
 
