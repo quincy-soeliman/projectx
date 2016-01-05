@@ -9,6 +9,9 @@ if (isset($_POST['summoner-name'])) {
   $summoner_name = $summoner->get_name();
   $summoner_id = $summoner->get_id();
 
+  $profile = new Profile($summoner_name);
+  print $profile->get_profile_icon();
+
   print $summoner_name;
   print $summoner_id;
 }

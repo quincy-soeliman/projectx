@@ -33,7 +33,7 @@ class Summoner {
     }
   }
 
-  public function get_id() {
+  public function get_summoner_id() {
     return $this->id;
   }
 
