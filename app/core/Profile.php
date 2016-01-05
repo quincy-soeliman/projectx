@@ -7,15 +7,15 @@ class Profile extends Summoner {
   }
 
   public function render_form() {
-    $html = '<div class="profile-form">';
+    $form = '<div class="profile-form">';
 
-    $html .= '';
-    $html .= '';
-    $html .= '';
+    $form .= '';
+    $form .= '';
+    $form .= '';
 
-    $html .= '</div>';
+    $form .= '</div>';
 
-    return $html;
+    return $form;
   }
 
 }
