@@ -22,9 +22,6 @@ if (isset($_POST['summoner-name']) && !empty($_POST['summoner-name'])) {
 
 <div class="profile-header">
   <div class="row">
-
-    <?php $summoner_name ?>
-
     <?php print 'ID: ' . $summoner->get_summoner_id(); ?>
 
     <?php if ($summoner->get_profile_icon_id() > 0): ?>
@@ -36,7 +33,6 @@ if (isset($_POST['summoner-name']) && !empty($_POST['summoner-name'])) {
     <?php if ($summoner->get_summoner_id() > 0): ?>
       <div class="summoner-info">
         <h2><?php print $summoner->get_summoner_name(); ?></h2>
-
         <p>Lvl: <?php print $summoner->get_summoner_level(); ?></p>
       </div>
     <?php endif; ?>
