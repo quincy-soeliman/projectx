@@ -15,9 +15,10 @@ class MatchHistory extends Summoner {
 
       foreach( $res as $r ) {
         $matches = $r['matches'];
-      }
 
-      var_dump( $matches );
+        var_dump( $matches );
+      }
+      return true;
     }
 
     return false;
