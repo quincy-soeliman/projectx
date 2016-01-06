@@ -33,8 +33,24 @@ class Profile extends Summoner {
     return false;
   }
 
-  public function calculate_total_games($number1, $number2) {
-    $total_games = $number1 + $number2;
+  public function get_tier_icon($tier, $division) {
+    $tier_icon_format = '.png';
+    $tier = strtolower($tier);
+    $division = strtolower($division);
+
+    if ($tier == 'challenger' || $tier == 'master') {
+      $tier_icon_url = '/images/tier-icons/base_icons/' . $tier . $tier_icon_format;
+    } else {
+      $tier_icon_url = '/images/tier-icons/tier_icons/' . $tier . '_' . $division . $tier_icon_format;
+    }
+
+    $tier_icon = '<img src="' . $tier_icon_url . '" class="tier-icon">';
+
+    return $tier_icon;
+  }
+
+  public function calculate_total_games($wins, $losses) {
+    $total_games = $wins + $losses;
 
     return $total_games;
   }
@@ -48,7 +64,6 @@ class Profile extends Summoner {
 
     return false;
   }
-
 
   public function get_ranked_solo_5x5_info() {
     $summoner_id = $this->get_summoner_id();
@@ -98,6 +113,7 @@ class Profile extends Summoner {
     $form = '<div class="ranked_solo_5x5_form">';
 
     $form .= '<h2>' . $this->ranked_solo_5x5_name . '</h2>';
+    $form .= $this->get_tier_icon($this->ranked_solo_5x5_tier, $this->ranked_solo_5x5_division);
     $form .= '<p>' . $this->ranked_solo_5x5_tier . ' ' . $this->ranked_solo_5x5_division . '</p>';
     $form .= '<p>LP: ' . $this->ranked_solo_5x5_lp . '</p>';
     $form .= '<p>Total games: ' . $this->ranked_solo_5x5_total_games . '</p>';
