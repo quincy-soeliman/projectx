@@ -18,11 +18,13 @@ if (isset($_POST['summoner-name']) && !empty($_POST['summoner-name'])) {
       </div>
     <?php endif; ?>
 
-    <div class="summoner-info">
-      <h2><?php print $summoner->get_summoner_name(); ?></h2>
+    <?php if ($summoner->get_summoner_id() > 0): ?>
+      <div class="summoner-info">
+        <h2><?php print $summoner->get_summoner_name(); ?></h2>
 
-      <p>Lvl: <?php print $summoner->get_summoner_level(); ?></p>
-    </div>
+        <p>Lvl: <?php print $summoner->get_summoner_level(); ?></p>
+      </div>
+    <?php endif; ?>
   </div>
 </div>
 
