@@ -10,8 +10,20 @@ if (isset($_POST['summoner-name']) && !empty($_POST['summoner-name'])) {
 }
 ?>
 
+<div class="search">
+  <div class="row">
+    <form action="profile.php" method="POST">
+      <div class="form-group">
+        <input type="text" name="summoner-name" class="form-control" placeholder="Summoner" required>
+      </div>
+    </form>
+  </div>
+</div>
+
 <div class="profile-header">
   <div class="row">
+
+    <?php $summoner_name ?>
 
     <?php print 'ID: ' . $summoner->get_summoner_id(); ?>
 
