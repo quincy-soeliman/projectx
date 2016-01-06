@@ -9,8 +9,21 @@
 
 <div class="header">
   <div class="container">
-    <!-- Header -->
+    <div class="row">
+      <div class="search">
+        <div class="row">
+          <form action="profile.php" method="POST">
+            <div class="form-group">
+              <input type="text" name="summoner-name" class="form-control" placeholder="Summoner" required>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+    </div>
   </div>
 </div>
 
 <div class="main-content container">
+  <div class="row">
