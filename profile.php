@@ -33,4 +33,6 @@ if (isset($_POST['summoner-name']) && !empty($_POST['summoner-name'])) {
   </div>
 </div>
 
+<?php include_once 'matchHistory.php'; ?>
+
 <?php include_once 'templates/footer.php'; ?>
