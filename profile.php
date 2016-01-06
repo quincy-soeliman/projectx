@@ -2,7 +2,7 @@
 require_once 'app/init.php';
 include_once 'templates/header.php';
 
-if (isset($_POST['summoner-name'])) {
+if (isset($_POST['summoner-name']) && !empty($_POST['summoner-name'])) {
   $summoner_name = $_POST['summoner-name'];
   $summoner = new Profile($summoner_name);
 } else {
@@ -12,9 +12,11 @@ if (isset($_POST['summoner-name'])) {
 
 <div class="profile-header">
   <div class="row">
-    <div class="summoner-icon">
-      <?php print $summoner->get_profile_icon(); ?>
-    </div>
+    <?php if ($summoner->get_profile_icon_id() > 0): ?>
+      <div class="summoner-icon">
+        <?php print $summoner->get_profile_icon(); ?>
+      </div>
+    <?php endif; ?>
 
     <div class="summoner-info">
       <h2><?php print $summoner->get_summoner_name(); ?></h2>
