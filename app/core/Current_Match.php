@@ -15,11 +15,11 @@ class Current_Match extends Summoner {
 
       if ($array) {
         foreach ($array as $data) {
-          $this->current_game_id = $data['gameId'];
-          $this->current_game_map_id = $data['mapId'];
-          $this->current_game_length = $data['gameLength'];
-          $this->platform_id = $data['platformId'];
-          $this->encryption_key = $data['observers']['encryptionKey'];
+          $this->current_game_id = $array['gameId'];
+          $this->current_game_map_id = $array['mapId'];
+          $this->current_game_length = $array['gameLength'];
+          $this->platform_id = $array['platformId'];
+          $this->encryption_key = $array['observers']['encryptionKey'];
         }
 
         return true;
