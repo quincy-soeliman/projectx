@@ -36,7 +36,11 @@ if (isset($_POST['summoner-name']) && !empty($_POST['summoner-name'])) {
         <p>Lvl: <?php print $summoner->get_summoner_level(); ?></p>
       </div>
     <?php endif; ?>
+  </div>
+</div>
 
+<div class="ranked-info">
+  <div class="row">
     <?php print $summoner->get_ranked_solo_5x5_form(); ?>
   </div>
 </div>

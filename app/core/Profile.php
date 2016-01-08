@@ -70,7 +70,7 @@ class Profile extends Summoner {
     $summoner_lvl = $this->get_summoner_level();
 
     if ($summoner_id && $summoner_lvl == 30) {
-      $url = BASE_URL . '/api/lol/euw/v2.5/league/by-summoner/' . $summoner_id . '/entry' . API_KEY;
+      $url = BASE_URL . '/api/lol/euw/v2.5/league/by-summoner/' . $summoner_id . '/entry' . '?api_key=' . API_KEY;
       $request = file_get_contents($url);
 
       $data = json_decode($request, true);

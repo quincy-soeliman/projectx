@@ -22,12 +22,12 @@ class Summoner {
     $summoner_name = str_replace(' ', '%20', $summoner);
 
     if (!empty($summoner_name)) {
-      $url = BASE_URL . '/api/lol/euw/v1.4/summoner/by-name/' . $summoner_name . API_KEY;
+      $url = BASE_URL . '/api/lol/euw/v1.4/summoner/by-name/' . $summoner_name . '?api_key=' .  API_KEY;
       $request = file_get_contents($url);
       $data = json_decode($request, true);
 
       foreach ($data as $value) {
-        $this->id = intval($value['id']);
+        $this->id = $value['id'];
         $this->name = $value['name'];
         $this->profile_icon_id = $value['profileIconId'];
         $this->revision_date = $value['revisionDate'];

@@ -10,8 +10,6 @@ require_once 'app/database/Database.php';
 require_once 'app/core/Summoner.php';
 require_once 'app/core/Profile.php';
 require_once 'app/core/MatchHistory.php';
-require_once 'app/core/Current_Match.php';
-require_once 'app/core/Spectator.php';
 
 // Interfaces
 // -
