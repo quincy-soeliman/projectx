@@ -39,13 +39,6 @@ if (isset($_POST['summoner-name']) && !empty($_POST['summoner-name'])) {
 
     <?php print $summoner->get_ranked_solo_5x5_form(); ?>
   </div>
-
-  <?php
-  $summoner_name = $_POST['summoner-name'];
-  $summoner = new Spectator($summoner_name);
-  $summoner->get_current_match_info();
-  $summoner->launch_spectator_client();
-  ?>
 </div>
 
 <?php include_once 'templates/footer.php'; ?>
